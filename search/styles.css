@@ -1,0 +1,178 @@
+@media (min-width: 1200px) {
+    body {
+        background: black  url(img/kyiv_nigh.jpg) no-repeat; /* Цвет фона и путь к файлу */
+        -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+        color: white !important;  /* Цвет текста */
+    }  
+    .btn3 {
+        color: white;
+    }
+}
+@media (max-width: 1199px){
+    body {
+        background-color: rgb(214, 248, 240);
+        color:  rgb(29, 29, 29) !important;  /* Цвет текста */
+    }
+    .btn3 {
+        color: rgb(29, 29, 29) !important;  /* Цвет текста */
+    }
+}
+
+* {
+    font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+}
+
+.topblock {
+    background: transparent;
+    width: auto;
+    padding: 1em;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    padding: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: 50px auto;
+}
+
+.grid-item {
+    padding: 20px;
+    text-align: left;
+}
+
+.btn3 {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+    min-width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-inline: 5px;
+}
+.btn3:hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: rgba(200, 218, 236, 0.5);
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+    min-width: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px grey;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-inline: 5px;
+}
+
+.midleblock {
+    background-color: transparent;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.formbutton {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 35px;
+}
+
+input {
+    margin-top: 25px;
+    border-radius: 25px;
+    background: white;
+    border: 1px grey solid;
+    width: 410px;
+    height: 45px;
+}
+input:focus {
+    outline: none;
+    background-color: white;
+    border: 2px yellow solid;
+    box-shadow: 0px 0px 3px yellow;
+}
+input:hover {
+    outline: none;
+    background-color: white;
+    border: 1px green solid;
+    box-shadow: 0px 0px 5px green;
+}
+input.icon{
+    background: white url(img/magnifying-glass.png) no-repeat center left;
+    background-size: auto 90%;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left:40px;
+}
+
+.paramblock {
+    color: #d93025;
+    font-size: 20px;
+    margin: 25px 35px;
+    font-family: arial,sans-serif;
+}
+.stroka {
+    border-bottom: 1px solid whitesmoke;
+    box-shadow: 0px 0px 3px white;
+}
+
+.paramforma {
+    max-width: 1140px;
+    min-width: 200px;
+    font-size: 14px;
+    width: 96%;
+    margin: 40px 2% 30px 45px;
+}
+
+.row {
+    margin: 1em auto 2em;
+}
+
+.findepage {
+    padding-right: 0px;
+    text-align: right;
+}
+
+.param-input {
+    width: 100%;
+    text-align: left;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    font-size: 13px;
+    height: 25px;
+    padding: 1px 8px;
+}
+
+.stroka2 {
+    margin: 18px 0;
+    clear: both;
+    border-top: 1px solid whitesmoke;
+    box-shadow: 0px 0px 3px white;
+}

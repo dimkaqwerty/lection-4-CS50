@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Кольори</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('select').onchange = function() {
+                    document.querySelector('#hello').style.color = this.value;
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Кольори</h1>
+        <select>
+            <option value="black">Чорний</option>
+            <option value="red">Червоний</option>
+            <option value="blue">Синій</option>
+            <option value="green">Зелений</option>
+        </select>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="main">
+    {% if request.user.is_authenticated %}
+    {% endif %}
+    
+    <div class = "tab-list">
+        <a id="all">Усі дописи</a>  
+        <a id="following">Підписки</a>
+    </div>
+
+    <div id="new_post">
+        <div id="error">  <!-- Блок повідомлень про помилки --> </div>
+        <form id="compose-form">
+            <textarea class="form-control" id="compose-body" placeholder="Новий пост"></textarea>
+            <input type="submit" class="btn btn-primary subm-disable" value="Надіслати"/>
+        </form>
+    </div>
+
+    <div id="tab-panel"> </div>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<script src="{% static 'network/network.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,285 @@
+.body {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h5 {
+    color: #0062cc;
+}
+
+.navbar {
+    padding: 0.1rem 3rem;
+    background: #abcbecdc;
+}
+
+.navbar-expand-lg {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: 1;
+}
+
+.btn {
+    margin: 0px 18px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-color: #abcbec7c;
+    border-style: none solid none;
+    border-width: 1px;
+
+}
+
+.form-control {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 96%;
+}
+
+#error {
+    width: 96%;
+}
+
+
+#compose-form input[type="submit"] {
+    float: right;
+    margin-right: 35px;
+}
+
+.tab-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 1vh;
+    margin-bottom: 1rem;
+}
+
+.tab {
+    width: 50%;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+}
+
+.tab:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.tab.active {
+    position: relative;
+}
+
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color: #abcbecdc;
+}
+
+#new_post {
+    flex: 1;
+    display: block;
+    margin: 10px 5% 0 5%;
+    padding: 10px 10px 40px 25px;
+    border: solid 1px #abcbecdc;
+    border-radius: 10px 80px / 100px;
+    margin-bottom: 20px;
+}
+
+#tab-panel {
+    flex: 1;
+    display: block;
+    margin: 10px 5% 0 5%;
+}
+
+#post-block {
+    background-color: #eff2f596;
+    padding: 10px 10px 50px 25px;
+    border: solid 1px #abcbecdc;
+    border-radius: 10px 80px / 100px;
+    margin-bottom: 20px;
+}
+
+#auth {
+    text-decoration: underline;
+    color: #0062cc;
+    font: bold 20px sans-serif;
+}
+
+#stamp {
+    margin-left: 25px;
+    font: bold 16px sans-serif;
+}
+
+/* #text-block {
+    margin-top: 15px;
+    margin-bottom: 10px;
+} */
+
+#button-block {
+    float: right;
+}
+
+#like-count {
+    margin-left: -15px;
+    margin-right: 20px;
+    font: 18px sans-serif;
+}
+
+.edit-btn {
+    background-image: url('edit.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 10px 25px;
+    display: inline-block;
+}
+
+.edit-btn::after {
+    content: "Редагувати";
+    position: absolute;
+    top: 110%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #4c9e129c;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.edit-btn:hover::after {
+    opacity: 1;
+}
+
+.edit-btn:hover {
+    border-radius: 10px;
+    background-color: #4c9e129c;
+}
+
+
+.like-btn {
+    background-image: url('like1.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 10px 25px;
+    display: inline-block;
+}
+
+.unlike-btn {
+    background-image: url('like.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; 
+    background-color: transparent;
+    border: none;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin: 10px 25px;
+    display: inline-block;
+}
+
+.unlike-btn::after, 
+.like-btn::after {
+    content: "Вподобайка";
+    position: absolute;
+    top: 110%;
+    right: auto;
+    /* bottom: 100%; */
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #f31e1e88;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.unlike-btn:hover::after, 
+.like-btn:hover::after {
+    opacity: 1;
+}
+
+.unlike-btn:hover, 
+.like-btn:hover {
+    border-radius: 10px;
+    background-color: #f31e1e88;
+}
+
+#control-block {
+    text-align: center;
+}
+
+#control-block button {
+    margin: 0 10px;
+}
+
+.editTextArea {
+    width: 98%;
+    border-radius: 6px;
+    max-height: none;
+    white-space: pre-wrap;
+}
+
+/* for login */
+.login_win {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    padding: 20px 50px;
+    background-color: #abcbecdc;
+    border-radius: 10px;
+    margin-top: 10vh;
+}
+
+.logbtn {
+    width: 96%;
+}
+
+
+@keyframes grow {
+    from {
+        font-size: 5px;
+    }
+    to {
+        font-size: 30px;
+    }
+}

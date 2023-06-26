@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>{% block title %}Social Network{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="shortcut icon" href="{% static 'images/online-chat.png' %}" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- імпортуємо останні версії React, ReactDOM і Babel. -->
+        <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        {% block js %}
+        {% endblock %}
+
+    </head>
+    <body>
+        
+        <p id="current_user" data-username="{{ user.username }}"></p>
+        <p id="cur_user_first" data-userf="{{user.first_name}}"></p>
+        <p id="cur_user_last" data-userl="{{user.last_name}}"></p>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'index' %}">Моя соціальна мережа</a>
+            <div>
+                <ul class="navbar-nav mr-auto">
+                    {% if user.is_authenticated %}    
+                        {% if user.is_superuser %}
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:red;" href="admin/"><strong>| Керування БД |  </strong></a>
+                            </li>
+                        {% endif %}           
+                        <li class="nav-item">
+                            <a id = "prof_user" class="nav-link" href="#"><strong>{{user.username}} ({{user.first_name}} {{user.last_name}})</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'logout' %}">Вихід</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Вхід</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Реєстрєстрація</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                </div>
+        </nav>
+        <script>
+            var currentUser = document.getElementById('current_user');
+            const curUser = currentUser.dataset.username;
+            currentUser = document.getElementById('cur_user_first');
+            const curUserF = currentUser.dataset.userf;
+            currentUser = document.getElementById('cur_user_last');
+            const curUserL = currentUser.dataset.userl;
+            var userData = [curUser, curUserF, curUserL];
+            const link = document.getElementById("prof_user");
+            link.addEventListener('click', () => {
+                profile_settings(userData);
+            });
+        </script>
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
